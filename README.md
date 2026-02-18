@@ -26,6 +26,22 @@ strip -s amdim
 
 *Note: Do not use `-prealloc` or `-autofree` flags as they may cause instability with the threading model used in this tool.*
 
+### Nix
+
+You can run or install `amdim` directly using Nix flakes:
+
+**Run directly (without installing):**
+```bash
+nix run github:ehsan2003/amdim -- <offset> <loopmode> <eyecare>
+```
+
+**Install to your profile:**
+```bash
+nix profile install github:ehsan2003/amdim
+```
+
+The Nix package automatically includes `umr` in the PATH wrapper, so you don't need to install it separately.
+
 ## Usage
 
 The tool requires root privileges to access hardware registers.
